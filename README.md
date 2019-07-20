@@ -80,10 +80,16 @@ b)	https://docs.azuredatabricks.net/api/latest/jobs.html#runs-get-output
 
 a)	Run the job created in step 8, which pass the job_id and the parameters for Notebook. 
 
-![image](https://user-images.githubusercontent.com/25307063/61577449-6c0b6780-aab5-11e9-8cc3-9fb4edf0b728.png)
+![image](https://user-images.githubusercontent.com/25307063/61579151-82262180-aacf-11e9-9e47-b42676a35fb2.png)
+
 
   It returns the run_id if the job starts successfully.
 
 ![image](https://user-images.githubusercontent.com/25307063/61577489-e6d48280-aab5-11e9-9f50-00ddc988594d.png)
 
 
+b)	Call get-output  Api to get Output of the job. This is a get request with the run_id which is returned from the above step.
+
+![image](https://user-images.githubusercontent.com/25307063/61579169-b6014700-aacf-11e9-9a6f-48e27549f8a0.png)
+
+The  return result contains state object, which need checks. Get the “notebook_output” when the "life_cycle_state": "TERMINATE” and  "result_state": "SUCCESS". The value of “notebook_output” depends on the notebook exit.
