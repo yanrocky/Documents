@@ -1,4 +1,5 @@
 # azure-databricks-cosmosdb-spark-blob-API
+This is a general instruction to create Jobs in Databricks with Notebook which reads data from Azure, massages it and then saves result back to azure blob, exits with the blob path. It also includes the samples which calls Databricks API to run the jobs and get the job result (the blob path). Alternatively, in the notebook, you can save result to Databricks tables and exit with the result at the end as well.
 
 1.	Dowload the latest azure-cosmosdb-spark connector from maven
   https://search.maven.org/artifact/com.microsoft.azure/azure-cosmosdb-spark_2.4.0_2.11/1.4.0/jar
@@ -20,7 +21,7 @@
 
 ![image](https://user-images.githubusercontent.com/25307063/61577394-af190b00-aab4-11e9-9866-82fb4dbe940e.png)
 
-5.	Create new Notbook in Workspace
+5.	Create new Notebook in Workspace
 
 ![image](https://user-images.githubusercontent.com/25307063/61577402-c7892580-aab4-11e9-9897-0b24aa36b158.png)
 
